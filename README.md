@@ -44,12 +44,13 @@ Here are some of the dependencies and devDependencies packages needed to be inst
 1. Material UI
 <br>We are going to use material UI to built react app faster. For that we need to install it using the following command;
 ``` js
-npm install @material-ui/core
+npm install @mui/material @emotion/react @emotion/styled
 ```
 Also, we install material UI Lab to get additional components like pagination which material UI don't provide. Use the following command to install;
 ``` js
-npm install @material-ui/lab
+npm install @mui/lab
 ```
+2. react-router-dom
 Our app is gonna be multipage website, so for that we need react router dom. Install it using the following command;
 ``` js
 npm i react-router-dom
