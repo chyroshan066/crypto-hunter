@@ -1,6 +1,6 @@
 # Crypto Hunter
 
-.
+
 
 ## Installing / Getting started
 
@@ -41,24 +41,34 @@ On following the link provided, you get to see the sample app.
 ### Initial Configuration
 
 Here are some of the dependencies and devDependencies packages needed to be installed for the project development:
+
 1. Material UI
-<br>We are going to use material UI to built react app faster. For that we need to install it using the following command;
-``` js
-npm install @mui/material @emotion/react @emotion/styled
-```
-Also, we install material UI Lab to get additional components like pagination which material UI don't provide. Use the following command to install;
-``` js
-npm install @mui/lab
-```
+<br>We are going to use material UI to built react app faster.
+<br> If you want it's installation process, how to import it and use the components then, go <a href="https://github.com/chyroshan066/notesApp">here</a>
+
 2. react-router-dom
-Our app is gonna be multipage website, so for that we need react router dom. Install it using the following command;
+<br>Our app is gonna be multipage website, so for that we need react router dom.
+<br> If you want it's installation process, how to use it then, go <a href="https://github.com/chyroshan066/react/tree/main/context-api">here</a>
+
+3. axios
+<br>For fetching API's we use axios. Install it using the following command;
 ``` js
-npm i react-router-dom
+npm i axios
+```
+After installing import "axios" in the file, where you want to fetch data using the following code;
+``` js
+import axios from 'axios';
+```
+Then instead of using "fetch()" use "axios.get()" to fetch the URL as;
+``` js
+const fetchTrendingCoins = async() => {
+    const { data } = await axios.get(TrendingCoins(currency));
+}
 ```
 
-
-[comment]: # (## Developing
-In order to develop the project, follow these steps)
+4. react-slick
+<br> For carousel/slider we use react-slick. 
+<br> If you want it's installation process, how to import it and use then, go <a href="https://github.com/chyroshan066/react/tree/main/react-slick">here</a>
 
 ### Building
 
@@ -67,10 +77,40 @@ To build the project for deployment, run the following command;
 npm run build
 ```
 
-[comment]: # (### Deploying/Publishing
-To deploy the project to a server, follow these steps)
+### Deploying/Publishing
 
-[comment]: # (## Features)
+To deploy the project on github pages, follow these steps;
+<br>1. Put the following code in your 'package.json' file;
+``` js
+"homepage": "https://myusername.github.io/my-app",
+```
+Replace 'myusername' with your github username and 'my-app' with your repository name.
+<br>2. Then run the following code in terminal to install github pages
+``` js
+npm install --save gh-pages
+```
+<br>3. After installing github pages, add the following script in your 'package.json' file;
+``` js
+"predeploy": "npm run build",
+"deploy": "gh-pages -d build",
+```
+<br>4. To deploy, run the following command;
+``` js
+npm run deploy
+```
+
+## Features
+
++ Used context API instead of props drilling to make code readable and easier for debugging & maintenance.
++ Used react-router-dom for no page reloading
++ Used material UI
+
+## Sources
+
++ Google Font
+  To get free fonts like Montserrat
++ Coin Gecko API
+  To get API of crypto currency valuation per share, its performance of last 365 days for charts
 
 [comment]: # (## Contributing)
 
