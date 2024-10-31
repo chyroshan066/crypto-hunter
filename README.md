@@ -1,6 +1,6 @@
 # Crypto Hunter
 
-
+Crypto Hunter is a web app which displays the past year performance of different crypto currencies in the form of graph so that the users can easily understand whether the currency valuation is increasing or decreasing. Also the user can choose whether they want to view the value/share in USD($) or Euro.
 
 ## Installing / Getting started
 
@@ -120,6 +120,3 @@ npm run deploy
   - <a href = "https://github.com/chyroshan066/text-formatter">Text Formatter</a>
   - <a href = "https://github.com/chyroshan066/notes">Notes</a>
 + <a href = "https://github.com/chyroshan066">Profile</a>
-  
-[comment]: # (## Licensing)
-
